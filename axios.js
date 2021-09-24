@@ -1,0 +1,39 @@
+const axios = require('axios')
+const httpAdapter = require('axios/lib/adapters/http');
+const settle = require('axios/lib/core/settle');
+const NodeCache = require("node-cache");
+const RequestCache = new NodeCache();
+const {controlpanel_url, controlpanel_api_key, controlpanel_api_location , requestCacheDuration} = require('./config')
+
+const customAdapter = (config) => {
+    if (config.method === 'get') {
+        let result = RequestCache.get(config.url)
+        if (result) {
+            return new Promise((resolve, reject) => {
+                let response = {
+                    data: result,
+                    cached : true
+                };
+                resolve(response)
+            })
+        }
+    }
+    return new Promise(function (resolve, reject) {
+        httpAdapter(config).then(response => {
+            console.log(response.config.method)
+            if (response.status === 200 && response.config.method === 'get') {
+                console.log(`Request '${response.config.url}' has been cached!`)
+                RequestCache.set(response.config.url , response.data , requestCacheDuration)
+            }
+            settle(resolve, reject, response);
+        });
+    })
+}
+
+let customAxios = axios.create({adapter: customAdapter})
+
+customAxios.defaults.headers.Authorization = 'Bearer ' + controlpanel_api_key;
+customAxios.defaults.baseURL = controlpanel_url + '/' + controlpanel_api_location
+
+
+module.exports = customAxios

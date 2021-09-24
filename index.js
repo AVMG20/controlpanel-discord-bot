@@ -19,6 +19,8 @@ for (const file of commandFiles) {
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
+    require('./deploy-commands')
+    require('./axios')
     console.log('Ready!');
 });
 
