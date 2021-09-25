@@ -2,6 +2,7 @@ const {SlashCommandBuilder} = require('@discordjs/builders');
 const {MessageEmbed} = require('discord.js');
 const axios = require('../axios')
 const {primaryColor} = require('../config')
+const {ExecutingUserNotLinkedError} = require('../embeds/notLinkedErrors')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -9,15 +10,13 @@ module.exports = {
         .setDescription('Fetch your information from controlpanel')
         .addBooleanOption(option =>
             option.setName('private')
-                .setDescription('Only you can see this information')
+                .setDescription("Set to private if you don't want other users to see this")
                 .setRequired(false))
     ,
     async execute(interaction) {
         try {
             let userResult = await axios.get(`/users/${interaction.user.id}`)
             let userData = userResult.data
-
-            console.log(interaction.options.getBoolean('private'))
 
             const userEmbed = new MessageEmbed()
                 .setColor(primaryColor)
@@ -35,12 +34,11 @@ module.exports = {
                 .setThumbnail(interaction.member.user.displayAvatarURL())
                 .setFooter(`${userResult.cached ? 'cached |' : ''} command: /me`, interaction.client.user.displayAvatarURL() );
 
-            await interaction.reply({embeds: [userEmbed]})
+            await interaction.reply({embeds: [userEmbed] , ephemeral: interaction.options.getBoolean('private') ?? false })
 
         } catch (error) {
-            console.log(error)
-            interaction.reply('error')
+            if (error.response.status === 404) interaction.reply({embeds : [ExecutingUserNotLinkedError], ephemeral : true})
+            else interaction.reply({content : 'error', ephemeral : true})
         }
-
     },
 };

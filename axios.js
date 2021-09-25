@@ -30,7 +30,7 @@ const customAdapter = (config) => {
     })
 }
 
-let customAxios = axios.create({adapter: customAdapter})
+let customAxios = axios.create()
 
 customAxios.defaults.headers.Authorization = 'Bearer ' + controlpanel_api_key;
 customAxios.defaults.baseURL = controlpanel_url + '/' + controlpanel_api_location
