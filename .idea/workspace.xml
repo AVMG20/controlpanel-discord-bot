@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bb73f31-d4dd-459e-998f-8e6c944fc998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/give.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/embeds/notLinkedErrors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/me.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/me.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/ping.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/give-wip.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/give-wip.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,8 @@
       <updated>1632426064738</updated>
       <workItem from="1632426065831" duration="9451000" />
       <workItem from="1632466652270" duration="5169000" />
-      <workItem from="1632551784990" duration="2801000" />
+      <workItem from="1632551784990" duration="3018000" />
+      <workItem from="1632690524276" duration="776000" />
     </task>
     <servers />
   </component>
@@ -88,5 +84,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632554510874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1632554510874" />
   </component>
 </project>
