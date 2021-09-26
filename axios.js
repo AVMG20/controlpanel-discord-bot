@@ -20,9 +20,7 @@ const customAdapter = (config) => {
     }
     return new Promise(function (resolve, reject) {
         httpAdapter(config).then(response => {
-            console.log(response.config.method)
             if (response.status === 200 && response.config.method === 'get') {
-                console.log(`Request '${response.config.url}' has been cached!`)
                 RequestCache.set(response.config.url , response.data , requestCacheDuration)
             }
             settle(resolve, reject, response);
