@@ -11,6 +11,12 @@ module.exports = {
     controlpanel_api_key: process.env.CONTROLPANEL_API_KEY,
     controlpanel_api_location : 'api',
 
+    bot : { // https://discordjs.guide/popular-topics/faq.html#how-do-i-check-if-a-guild-member-has-a-specific-role
+        activity : 'LISTENING',
+        activity_message : 'Slash commands',
+        activity_status : 'online',
+    },
+
     //cache results from get request to the api
     requestCacheDuration : 60 * 30, //30 mins
 

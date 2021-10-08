@@ -26,6 +26,9 @@ client.once('ready', async () => {
         await CommandDeployer.setPermissions()
     }
 
+    await client.user.setActivity('slash commands' , { type: 'LISTENING' });
+    await client.user.setStatus('online');
+
     console.log('Ready!');
 });
 
