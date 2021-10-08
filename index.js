@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const CommandDeployer = require('./deploy-commands')
-const { token, guildId } = require('./config');
+const { token, bot } = require('./config');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -26,8 +26,8 @@ client.once('ready', async () => {
         await CommandDeployer.setPermissions()
     }
 
-    await client.user.setActivity('slash commands' , { type: 'LISTENING' });
-    await client.user.setStatus('online');
+    await client.user.setActivity(bot.activity_message , { type:bot.activity });
+    await client.user.setStatus(bot.activity_status);
 
     console.log('Ready!');
 });
