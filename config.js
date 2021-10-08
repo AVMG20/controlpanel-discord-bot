@@ -3,7 +3,9 @@ require('dotenv').config()
 module.exports = {
     token: process.env.BOT_TOKEN,
     clientId: process.env.CLIENT_ID,
+
     guildId: process.env.GUILD_ID,
+    adminRoleId: process.env.ADMIN_ROLE_ID,
 
     controlpanel_url: process.env.CONTROLPANEL_URL,
     controlpanel_api_key: process.env.CONTROLPANEL_API_KEY,

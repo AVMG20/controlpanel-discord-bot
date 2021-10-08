@@ -1,13 +1,14 @@
 const {SlashCommandBuilder} = require('@discordjs/builders');
 const {MessageEmbed} = require('discord.js');
 const axios = require('../axios')
-const {colors} = require('../config')
+const {colors , adminRoleId} = require('../config')
 const {SearchedUserNotLinked} = require('../embeds/notLinkedErrors')
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('give')
         .setDescription('Give a user credits')
+        .setDefaultPermission(false) //make sure default permissions is set to false when using the permissions property
         .addUserOption(option => option
             .setName('target')
             .setRequired(true)
@@ -21,6 +22,13 @@ module.exports = {
                 .setDescription("Set to private if you don't want other users to see this")
                 .setRequired(false))
     ,
+    permissions: [
+        {
+            id: adminRoleId,
+            type: 'ROLE',
+            permission: true,
+        },
+    ],
     async execute(interaction) {
         try {
             let target = interaction.options.getUser('target')

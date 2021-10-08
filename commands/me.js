@@ -1,13 +1,14 @@
 const {SlashCommandBuilder} = require('@discordjs/builders');
 const {MessageEmbed} = require('discord.js');
 const axios = require('../axios')
-const {primaryColor} = require('../config')
+const {primaryColor, adminRoleId} = require('../config')
 const {ExecutingUserNotLinkedError} = require('../embeds/notLinkedErrors')
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('me')
         .setDescription('Fetch your information from controlpanel')
+        .setDefaultPermission(true) //make sure default permissions is set to true when not using the permissions property
         .addBooleanOption(option =>
             option.setName('private')
                 .setDescription("Set to private if you don't want other users to see this")

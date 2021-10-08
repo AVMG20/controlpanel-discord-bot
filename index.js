@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config');
+const CommandDeployer = require('./deploy-commands')
+const { token, guildId } = require('./config');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -18,9 +19,13 @@ for (const file of commandFiles) {
 
 
 // When the client is ready, run this code (only once)
-client.once('ready', () => {
-    require('./deploy-commands')
-    require('./axios')
+client.once('ready', async () => {
+    if (process.env.LOAD_SLASH_COMMANDS.toLowerCase() === 'true') {
+        CommandDeployer.setClient(client)
+        await CommandDeployer.loadCommands()
+        await CommandDeployer.setPermissions()
+    }
+
     console.log('Ready!');
 });
 
