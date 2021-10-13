@@ -18,7 +18,7 @@ module.exports = {
     },
 
     //cache results from get request to the api
-    requestCacheDuration : 60 * 30, //30 mins
+    requestCacheDuration : 1, //30 mins
 
     colors : {
         primary : '#575fcf',

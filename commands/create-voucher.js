@@ -2,9 +2,8 @@ const {SlashCommandBuilder} = require('@discordjs/builders');
 const {MessageEmbed} = require('discord.js');
 const axios = require('../axios')
 const {colors, adminRoleId} = require('../config')
-const {SearchedUserNotLinked} = require('../embeds/notLinkedErrors')
-const validationError = require('../embeds/validationError')
 const {nanoid} = require('nanoid')
+const errorHandler = require('../helpers/errorHandler')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -77,12 +76,7 @@ module.exports = {
             await interaction.reply({embeds: [giveEmbed], ephemeral: interaction.options.getBoolean('private') ?? false})
 
         } catch (error) {
-            if (error.response.status === 404) {
-                interaction.reply({embeds: [SearchedUserNotLinked], ephemeral: true})
-            } else {
-                const validationErrorEmbed = await validationError.validationErrorEmbed(error);
-                interaction.reply({embeds: [validationErrorEmbed], ephemeral: true})
-            }
+            await errorHandler(error, interaction);
         }
 
     },

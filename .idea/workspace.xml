@@ -10,7 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb73f31-d4dd-459e-998f-8e6c944fc998" name="Default Changelist" comment="" />
+    <list default="true" id="0bb73f31-d4dd-459e-998f-8e6c944fc998" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/helpers/errorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/me.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/me.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +47,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/embeds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bitsec-dashboard" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -67,7 +73,10 @@
       <workItem from="1632690524276" duration="2528000" />
       <workItem from="1632854822552" duration="139000" />
       <workItem from="1633701655563" duration="2589000" />
-      <workItem from="1633706844461" duration="5645000" />
+      <workItem from="1633706844461" duration="6711000" />
+      <workItem from="1634144525807" duration="998000" />
+      <workItem from="1634154574284" duration="35000" />
+      <workItem from="1634154814980" duration="3611000" />
     </task>
     <servers />
   </component>
@@ -87,10 +96,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1632854961506">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1634156557971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1632854961505" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1634156557971" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1634144582109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1634144582109" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632554510874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
