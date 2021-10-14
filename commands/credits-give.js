@@ -6,7 +6,7 @@ const errorHandler = require('../helpers/errorHandler')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('give')
+        .setName('credits-give')
         .setDescription('Give a user credits')
         .setDefaultPermission(false) //make sure default permissions is set to false when using the permissions property
         .addUserOption(option => option

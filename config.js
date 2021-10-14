@@ -1,6 +1,8 @@
 require('dotenv').config()
 
 module.exports = {
+    app_env: process.env.APP_ENV,
+
     token: process.env.BOT_TOKEN,
     clientId: process.env.CLIENT_ID,
 
@@ -9,20 +11,22 @@ module.exports = {
 
     controlpanel_url: process.env.CONTROLPANEL_URL,
     controlpanel_api_key: process.env.CONTROLPANEL_API_KEY,
-    controlpanel_api_location : 'api',
+    controlpanel_api_location: 'api',
 
-    bot : { // https://discordjs.guide/popular-topics/faq.html#how-do-i-check-if-a-guild-member-has-a-specific-role
-        activity : 'LISTENING',
-        activity_message : 'Slash commands',
-        activity_status : 'online',
+    pterodactyl_url: process.env.PTERODACTYL_URL,
+
+    bot: { // https://discordjs.guide/popular-topics/faq.html#how-do-i-check-if-a-guild-member-has-a-specific-role
+        activity: 'LISTENING',
+        activity_message: 'Slash commands',
+        activity_status: 'online',
     },
 
     //cache results from get request to the api
-    requestCacheDuration : 1, //30 mins
+    requestCacheDuration: 60 * 30, //30 mins
 
-    colors : {
-        primary : '#575fcf',
-        danger : '#ff3f34',
+    colors: {
+        primary: '#575fcf',
+        danger: '#ff3f34',
     },
 
 }

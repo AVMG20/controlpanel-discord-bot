@@ -7,8 +7,8 @@ const errorHandler = require('../helpers/errorHandler')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('create-voucher')
-        .setDescription('Create a voucher code')
+        .setName('voucher-create')
+        .setDescription('Create a voucher')
         .setDefaultPermission(false) //make sure default permissions is set to false when using the permissions property
         .addIntegerOption(option => option
             .setName('credits')

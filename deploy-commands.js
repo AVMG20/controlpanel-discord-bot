@@ -41,6 +41,7 @@ class CommandDeployer {
     }
 
     async setPermissions() {
+        console.log(`Setting application command permissions.`)
         let commands = await this.client.guilds.cache.get(guildId)?.commands.fetch()
         for (let command of commands) {
             for (let commandBuilder of this.commands) {
@@ -49,6 +50,8 @@ class CommandDeployer {
                     if (commandBuilder[1]?.permissions) {
                         await matchingCommand.permissions.add({permissions : commandBuilder[1].permissions}).catch(console.error)
                         console.log(`command: '${commandBuilder[1]?.data?.name}' | ${commandBuilder[1].permissions.length} permissions set!`)
+                    } else {
+                        console.log(`command: '${commandBuilder[1]?.data?.name}' | No permissions set!`)
                     }
                 }
             }

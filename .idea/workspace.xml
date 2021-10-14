@@ -11,10 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bb73f31-d4dd-459e-998f-8e6c944fc998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helpers/errorHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buttons/linkedButtons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/user-info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embeds/userEmbed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/create-voucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/voucher-create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/give-credits.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/credits-give.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/me.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/me.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy-commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bitsec-dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -55,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ArnoV\Desktop\project\Controlpanel Discord Bot\commands" />
       <recent name="C:\Users\ArnoV\Desktop\Controlpanel Discord Bot\embeds" />
       <recent name="C:\Users\ArnoV\Desktop\Controlpanel Discord Bot\commands" />
     </key>
@@ -76,7 +86,8 @@
       <workItem from="1633706844461" duration="6711000" />
       <workItem from="1634144525807" duration="998000" />
       <workItem from="1634154574284" duration="35000" />
-      <workItem from="1634154814980" duration="3611000" />
+      <workItem from="1634154814980" duration="3854000" />
+      <workItem from="1634222867165" duration="7837000" />
     </task>
     <servers />
   </component>
